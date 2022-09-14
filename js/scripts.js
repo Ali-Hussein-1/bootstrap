@@ -50,7 +50,10 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+
+    // initializing a variable for the submit button
     const submit = document.querySelector('submitButton');
+    // initializing an event to take data upon submitting 
     submit.addEventListener('submit',()=>{
     
     const fullname = document.querySelector('name');
@@ -65,4 +68,4 @@ window.addEventListener('DOMContentLoaded', event => {
     
      })
 
-});
+})
