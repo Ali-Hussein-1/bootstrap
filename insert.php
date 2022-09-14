@@ -1,15 +1,13 @@
 <?php
 include("connections.php");
 
-$name = $_GET["name"];
-$email = $_GET["email"];
-$tel = $_GET["tel"];
-$message = $_GET["message"];
+$name = $_POST["name"];
+$email = $_POST["email"];
+$tel = $_POST["tel"];
+$message = $_POST["message"];
 
-$query = "INSERT INTO articles(name, email, tel, message) VALUE (" . $name .", ?)";
-
-$query = $mysqli->prepare("INSERT INTO articles(name, email, tel, message) VALUE (?, ?, ?, ?)");
-$query->bind_param("ssss", $name, $email, $tel, $message);
+$query = $mysqli->prepare("INSERT INTO contacts(name, email, tel, message) VALUE (?, ?, ?, ?)");
+$query->bind_param("ssis", $name, $email, $tel, $message);
 $query->execute();
 
 $response = [];
