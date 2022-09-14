@@ -50,5 +50,25 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+    const submit = document.querySelector('submitButton');
+    submit.addEventListener('submit',()=>{
+    
+    const fullname = document.querySelector('name');
+    const email = document.querySelector('email');
+    const tel = document.querySelector('phone');
+    const message = document.querySelector('message');
+    const url = http://localhost/bootstrap-assignment/insert.php;
+    fetch(url,{
+        method : 'POST',
+    
+    })
+    
+     })
+
+
+
+
+
+
 
 });
