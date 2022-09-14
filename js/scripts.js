@@ -57,18 +57,12 @@ window.addEventListener('DOMContentLoaded', event => {
     const email = document.querySelector('email');
     const tel = document.querySelector('phone');
     const message = document.querySelector('message');
-    const url = http://localhost/bootstrap-assignment/insert.php;
+    const url = "http://localhost/bootstrap-assignment/insert.php"
     fetch(url,{
         method : 'POST',
-    
+        body: new URLSearchParams({"name" : name.value,  "email" : email.value, "tel" : tel.value, "message" : message.value})
     })
     
      })
-
-
-
-
-
-
 
 });
